@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: #8b5cf6;
+  --bg-color: #0f172a;
+  --snd-bg-color: #1e293b;
+  --text-color: #f8fafc;
+}
+
+/* :root {
+  --main-color: #2563eb;
+  --bg-color: #fff;
+  --snd-bg-color: #f1f5f9;
+  --text-color: #0f172a;
+}
+
+:root {
+  --main-color: #10b981;
+  --bg-color: #111827;
+  --snd-bg-color: #1f2937;
+  --text-color: #f9fafb;
+} */
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: "Inter", Roboto, Ubuntu, sans-serif;
+
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+section {
+  min-height: 100vh;
+  padding: 10rem 9% 2rem;
+}
+
+/* Header Section Code*/
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 5%;
+  background: var(--main-color);
+  backdrop-filter: blur(10px);
+  transition: all 0.5 ease;
+}
+
+.logo {
+  font-size: 3rem;
+  color: var(--bg-color);
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3 ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.navbar a {
+  font-size: 1.9rem;
+  color: var(--bg-color);
+  margin-left: 4rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.7 ease;
+}
+
+.navbar a:hover,
+a.active {
+  color: var(--text-color);
+}
+
+#menu-icon {
+  font-size: 3.6rem;
+  color: var(--bg-color);
+  cursor: pointer;
+  /*TODO quitar provisional*/
+  display: none;
+}
