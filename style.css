@@ -30,15 +30,21 @@
 html {
   font-size: 62.5%;
   overflow-x: hidden;
+  /*
+  Para que se aplique el efecto de scroll tiene que ir en la etiqueta HTML
+  scroll-behavior controla cómo se desplaza el contenido cuando se navega mediante enlaces internos, como estos:
+  
+  <a href="#home">Home</a>
+  <a href="#about">About Me</a>
+  */
+  scroll-behavior: smooth;
 }
 
 body {
   text-decoration: none;
   border: none;
   outline: none;
-  scroll-behavior: smooth;
   font-family: "Inter", Roboto, Ubuntu, sans-serif;
-
   background-color: var(--bg-color);
   color: var(--text-color);
 }
@@ -149,6 +155,7 @@ a.active {
   margin-bottom: 2rem;
 }
 
+/*All lo que este en un span tendra el main color*/
 span {
   color: var(--main-color);
 }
@@ -164,7 +171,7 @@ span {
 }
 
 .social-media a {
-  /*usando la propiedad flex muestra los elementos en linea*/
+  /*usando la propiedad inline-flex muestra los elementos en linea*/
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -203,4 +210,53 @@ span {
 
 .btn:hover {
   box-shadow: 0 0 1.6rem var(--main-color);
+}
+
+/*About Section*/
+
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  background: var(--snd-bg-color);
+}
+
+.about-img img {
+  width: 25vw;
+  border: 2px solid var(--main-color);
+  border-radius: 50%;
+  box-shadow: 0 0 25px var(--main-color);
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+
+.about-img img:hover {
+  box-shadow:
+    0 0 25px var(--main-color),
+    0 0 35px var(--main-color),
+    0 0 45px var(--main-color);
+}
+
+.heading {
+  font-size: 6rem;
+  text-align: center;
+}
+
+.about-content {
+  padding: 0 4rem;
+}
+
+.about-content h2 {
+  text-align: left;
+  line-height: 1.2;
+}
+
+.about-content h3 {
+  font-size: 3rem;
+}
+
+.about-content p {
+  font-size: 1.6rem;
+  margin: 2rem 0 3rem;
 }
